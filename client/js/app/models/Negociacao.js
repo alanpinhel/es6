@@ -23,7 +23,7 @@ class Negociacao {
         return this._valor;
     }
 
-    getVolume() {
+    get volume() {
         
         return this.quantidade * this.valor;
     }
