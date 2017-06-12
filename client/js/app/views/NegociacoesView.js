@@ -1,7 +1,7 @@
 class NegociacoesView extends View {
 
     template(model) {
-    
+
         return `
             <table class="table table-hover table-bordered">
                 <thead>
@@ -12,7 +12,6 @@ class NegociacoesView extends View {
                         <th>VOLUME</th>
                     </tr>
                 </thead>
-        
                 <tbody>
                     ${model.negociacoes.map(n => `
                         <tr>
@@ -23,10 +22,9 @@ class NegociacoesView extends View {
                         </tr>
                     `).join()}
                 </tbody>
-
                 <tfoot>
                     <td colspan="3"></td>
-                    <td>${model.negociacoes.reduce((total, n) => total += n.volume, 0.0)}</td>
+                    <td>${model.volumeTotal}</td>
                 </tfoot>
             </table>
         `;
